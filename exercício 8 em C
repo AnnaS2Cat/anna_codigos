@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-int i, n1, n2, n3;
+int i, n1, n2;
 printf(" diga o valor 1:");
 scanf("%d", &n1);
 printf(" diga o valor 2:");
