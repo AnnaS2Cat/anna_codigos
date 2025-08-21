@@ -1,0 +1,4 @@
+a=int(input('fale um valor:'))
+b=int(input('fale outro:'))
+for i in range(a+1,b):
+    print(i)
