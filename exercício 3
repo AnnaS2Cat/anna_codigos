@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    float dolar,reais;
+    float cot= 3.17;
+    printf("digite o preço do celular em dolares:");
+    scanf("%f", &dolar);
+    reais=dolar*cot;
+    if (reais<=100){printf("bom negócio");}
+}
