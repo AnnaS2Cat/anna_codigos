@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+#define times 20
+
+int main() {
+    int id[times];
+    int vitorias[times], empates[times], derrotas[times];
+    int pontos[times];
+    int n, i;
+
+    printf("Quantos times deseja cadastrar (até 20)? ");
+    scanf("%d", &n);
+
+    // dados dos times
+    for (i = 0; i < n; i=i+1) {
+        printf(" %d:", i + 1);
+        printf("id do time: ");
+        scanf("%d", &id[i]);
+
+        printf("Número de vitórias: ");
+        scanf("%d", &vitorias[i]);
+
+        printf("Número de empates: ");
+        scanf("%d", &empates[i]);
+
+        printf("Número de derrotas: ");
+        scanf("%d", &derrotas[i]);
+
+        // Calcula os pontos
+        pontos[i] = vitorias[i] * 3 + empates[i];
+    }
+
+    //time com mais e menos pontos
+    int max = pontos[0], min = pontos[0];
+    int id_max = id[0], id_min = id[0];
+
+    for (i = 1; i < n; i++) {
+        if (pontos[i] > max) {
+            max = pontos[i];
+            id_max = id[i];
+        }
+        if (pontos[i] < min) {
+            min = pontos[i];
+            id_min = id[i];
+        }
+    }
+
+    printf("Time com mais pontos: ID %d" , id_max, max);
+    printf("Time com menos pontos: ID %d ",id_min, min);
+
+}
+
